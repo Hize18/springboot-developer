@@ -5,6 +5,10 @@ spring:
       hibernate:
         format_sql: true
     defer-datasource-initialization: true
+  datasource:
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
   h2:
     console:
       enabled: true
@@ -13,11 +17,9 @@ spring:
       client:
         registration:
           google:
-            client-id: client-id
-            client-secret: client-secret
-            scope:
-              - email
-              - profile
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope: ${GOOGLE_SCOPE}
 jwt:
   issuer: ajufresh@gmail.com
-  secret_key: secret-key
+  secret_key: ${JWT_SECRET_KEY}
