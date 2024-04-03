@@ -11,4 +11,3 @@ public class SpringBootDeveloperApplication {
         SpringApplication.run(SpringBootDeveloperApplication.class, args);
     }
 }
-
